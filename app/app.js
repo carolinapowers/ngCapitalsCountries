@@ -8,7 +8,12 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
         })
         .when('/countries', {
             templateUrl: 'countries/countries.html',
-            controller: 'CountriesCtrl'
+            controller: 'CountriesCtrl',
+            resolve: {
+                response: function (dataService) {
+                    return dataService.getCountries();
+                }
+            }
         })
         .when('/countries/:country/capital', {
             template: '<p>countries details',

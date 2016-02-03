@@ -3,7 +3,6 @@ angular.module('countryCapital')
 
 function HomeCtrl($scope, $location) {
 
-    $scope.country = "Brazil";
 
     $scope.browseCountries = function () {
         $location.path("/countries");
