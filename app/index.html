@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="countryCapital">
 
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <!--bower:css-->
     <!--endbower-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-    <p ng-init="hello = 'hi'">hello root</p>
+    <h1 id="title">Countries & Capitals</h1>
+    <hr>
+    <ng-view></ng-view>
 
-    {{hello}}
     <!--bower:js-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!--endbower-->
+    <script src="app.js"></script>
+    <script src="data-service.js"></script>
+    <script src="home/home-controller.js"></script>
+    <script src="countries/countries-controller.js"></script>
+
 </body>
 
 </html>

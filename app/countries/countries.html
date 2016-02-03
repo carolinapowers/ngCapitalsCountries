@@ -1,0 +1,13 @@
+{{hello}}
+<table>
+    <th>Name</th>
+    <th>Country Code</th>
+    <th>Capital</th>
+    <th>Area in km2</th>
+    <th>Population</th>
+    <th>Continent</th>
+    <tr ng-repeat="country in countries | orderBy: 'name'">
+        <td>{{country.name}}</td>
+
+    </tr>
+</table>
