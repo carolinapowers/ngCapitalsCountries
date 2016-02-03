@@ -6,8 +6,12 @@
     <th>Area in km2</th>
     <th>Population</th>
     <th>Continent</th>
-    <tr ng-repeat="country in countries | orderBy: 'name'">
-        <td>{{country.name}}</td>
-
+    <tr ng-repeat="country in countries track by $index | orderBy: 'name'">
+        <td>{{country.countryName}}</td>
+        <td>{{country.countryCode}}</td>
+        <td>{{country.capital}}</td>
+        <td>{{country.areaInSqKm}}</td>
+        <td>{{country.population}}</td>
+        <td>{{country.continent}}</td>
     </tr>
 </table>
