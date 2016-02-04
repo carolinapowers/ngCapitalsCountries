@@ -6,9 +6,9 @@ CountriesCtrl.$inject = ['dataService', '$scope', '$http', '$location', '$routeP
 function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, countryDetails) {
 
 
-    dataService.getCountries($routeParams.country)
+    dataService.getCountries()
         .then(function (response) {
-            $scope.currentCountry = $routeParams.country;
+            return $scope.currentCountry = $routeParams.country;
         });
 
 
@@ -16,8 +16,8 @@ function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, coun
         $location.path('/');
     }
 
-    $scope.loadView = function () {
-        $location.path('/countries' + $scope.country + '/capital');
-    }
+    //    $scope.loadView = function () {
+    //        $location.path('/countries' + $scope.country + '/capital');
+    //    }
 
 }
