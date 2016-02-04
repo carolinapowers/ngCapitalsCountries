@@ -21,9 +21,37 @@ function dataService($http, $q) {
                 })
                 .then(function (response) {
                     return $q.when(response.data.geonames);
+                }, function (error) {
+                    return $q.reject(error);
                 });
 
 
+        },
+
+        getCountry: function (country) {
+            var config = {
+                params: {
+                    username: 'carolinapowers',
+                    country: country
+                }
+            }
+
+            var url = 'http://api.geonames.org/searchJSON';
+
+            return $http.get(url, config);
+        },
+
+        getNeighbors: function (country) {
+            var config = {
+                params: {
+                    username: 'carolinapowers',
+                    country: country
+                }
+            }
+
+            var url = "http://api.geonames.org/neighboursJSON"
+
+            return $http.get(url, config);
         }
     }
 }

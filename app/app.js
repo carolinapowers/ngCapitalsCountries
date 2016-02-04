@@ -10,21 +10,21 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
             templateUrl: 'countries/countries.html',
             controller: 'CountriesCtrl',
             resolve: {
-                response: function (dataService) {
+                countries: function (dataService) {
                     return dataService.getCountries();
                 }
             }
         })
-        .when('/countries/:country/capital', {
-            template: '<p>countries details',
-        })
 
-    .when('/countries/:country/capital', {
+    .when('/countries/:country', {
         templateUrl: 'country-detail/country-detail.html',
         controller: "CountryDetailsCtrl",
         resolve: {
             countryDetails: ['dataService', '$route', function (dataService, $route) {
-                return dataService.getCountries($route.current.params.country);
+                return dataService.getCountry($route.current.params.country);
+                }],
+            neighbors: ['dataService', '$route', function (dataService, $route) {
+                return dataService.getNeighbors($route.current.params.country);
                 }]
         }
     })

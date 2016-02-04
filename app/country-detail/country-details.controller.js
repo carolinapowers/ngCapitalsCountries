@@ -1,27 +1,14 @@
 angular.module('countryCapital')
     .controller('CountryDetailsCtrl', CountriesCtrl);
 
-CountriesCtrl.$inject = ['dataService', '$scope', '$http', '$location', '$routeParams', 'countryDetails'];
+CountriesCtrl.$inject = ['dataService', '$scope', '$http', '$location', 'countryDetails', 'neighbors'];
 
-function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, countryDetails) {
-
-
-    dataService.getCountries()
-        .then(function (response) {
-            $scope.currentCountry = $routeParams.country;
-            console.log($routeParams);
-            console.log($routeParams.country);
-        });
+function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, countryDetails, neighbors) {
 
 
-    $scope.goHome = function () {
-        $location.path('/');
-    }
+    $scope.country = countryDetails;
 
-    //    $scope.loadView = function () {
-    //        $location.path('/countries/' + $scope.country + '/capital');
-    //    }
-    var capital = _.find($scope.currentCountry, 'capital');
+    $scope.neighbors = neighbors;
 
 
 }

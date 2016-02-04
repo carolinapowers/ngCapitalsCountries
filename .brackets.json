@@ -1,0 +1,10 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/carolinapowers/ngCapitalsCountries/gulpfile.js",
+        "/Users/carolinapowers/ngCapitalsCountries/app/home/home-controller.js",
+        "/Users/carolinapowers/ngCapitalsCountries/app/country-detail/country-details.controller.js",
+        "/Users/carolinapowers/ngCapitalsCountries/app/countries/countries-controller.js",
+        "/Users/carolinapowers/ngCapitalsCountries/app/bower_components/lodash/vendor/underscore/underscore.js",
+        "jquery.js"
+    ]
+}
