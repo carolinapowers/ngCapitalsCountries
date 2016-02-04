@@ -8,7 +8,9 @@ function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, coun
 
     dataService.getCountries()
         .then(function (response) {
-            return $scope.currentCountry = $routeParams.country;
+            $scope.currentCountry = $routeParams.country;
+            console.log($routeParams);
+            console.log($routeParams.country);
         });
 
 
@@ -17,7 +19,9 @@ function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, coun
     }
 
     //    $scope.loadView = function () {
-    //        $location.path('/countries' + $scope.country + '/capital');
+    //        $location.path('/countries/' + $scope.country + '/capital');
     //    }
+    var capital = _.find($scope.currentCountry, 'capital');
+
 
 }
