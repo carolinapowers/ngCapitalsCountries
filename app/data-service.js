@@ -20,7 +20,6 @@ function dataService($http, $q) {
                     params: params
                 })
                 .then(function (response) {
-                    console.log(response.data.geonames);
                     return $q.when(response.data.geonames);
                 });
 

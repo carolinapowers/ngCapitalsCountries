@@ -19,5 +19,13 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
             template: '<p>countries details',
         })
 
-
+    .when('/countries/:country/capital', {
+        templateUrl: 'country-detail/country-detail.html',
+        controller: "CountryDetailsCtrl",
+        resolve: {
+            countryDetails: ['dataService', '$route', function (dataService, $route) {
+                return dataService.getCountries($route.current.params.country);
+                }]
+        }
+    })
 }])

@@ -5,13 +5,14 @@
     <th>Area in km2</th>
     <th>Population</th>
     <th>Continent</th>
-    <tr ng-repeat="country in countries track by $index | orderBy: 'name'">
+    <tr ng-repeat="country in countries track by $index | orderBy: 'name'" ng-click="loadView()">
         <td>{{country.countryName}}</td>
         <td>{{country.countryCode}}</td>
         <td>{{country.capital}}</td>
         <td>{{country.areaInSqKm}}</td>
         <td>{{country.population}}</td>
-        <td>{{country.continent}}</td>
+        <td><a ng-href="#/countries/{{country}}/capital">{{country.continent}}</a>
+        </td>
     </tr>
 </table>
 
