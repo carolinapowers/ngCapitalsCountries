@@ -1,1 +1,16 @@
-{{neighbors}}
+<div class="container text-center">
+    <h1>{{oneCountry.countryName}}</h1>
+    <p>Population of the Country: {{oneCountry.population}}</p>
+    <p>Capital of the Country: {{oneCountry.capital}}</p>
+    <p>Area: {{oneCountry.areaInSqKm }}</p>
+
+    <span>{{neighbors.length}} Neighbors: </span>
+    <span ng-repeat="neighbor in neighbors">
+    <a href="">{{neighbor}}</a>
+</span>
+
+    <div>
+        <img id='myImage' src="http://www.geonames.org/img/country/250/{{oneCountry.countryCode}}.png" />
+        <img src="http://www.geonames.org/flags/x/{{oneCountry.countryCode | lowercase}}.gif" />
+    </div>
+</div>

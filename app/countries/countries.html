@@ -1,22 +1,29 @@
-<table>
-    <th>Name</th>
-    <th>Country Code</th>
-    <th>Capital</th>
-    <th>Area in km2</th>
-    <th>Population</th>
-    <th>Continent</th>
-    <tr ng-repeat="country in countries track by $index | orderBy: 'name'" ng-click="loadView()">
-        <td>{{country.countryName}}</td>
-        <td>{{country.countryCode}}</td>
-        <td>{{country.capital}}</td>
-        <td>{{country.areaInSqKm}}</td>
-        <td>{{country.population}}</td>
-        <td><a ng-href="#/countries/{{country.countryCode}}">{{country.continent}}</a>
-        </td>
-    </tr>
-</table>
+<div class="container">
+    <table>
+        <th>Name</th>
+        <th>Country Code</th>
+        <th>Capital</th>
+        <th>Area in km2</th>
+        <th>Population</th>
+        <th>Continent</th>
+        <tr ng-repeat="country in countries track by $index | orderBy: 'name'" ng-click="loadView()">
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.countryName}}</a>
+            </td>
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.countryCode}}</a>
+            </td>
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.capital}}</a>
+            </td>
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.areaInSqKm}}</a>
+            </td>
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.population}}</a>
+            </td>
+            <td><a ng-href="#/countries/{{country.countryCode}}">{{country.continent}}</a>
+            </td>
+        </tr>
+    </table>
 
 
-<div class="col-md-4 col-md-offset-4">
-    <button class="btn btn-default" ng-click="goHome()">Home</button>
+    <div class="col-md-4 col-md-offset-4">
+        <button class="btn btn-default" ng-click="goHome()">Home</button>
+    </div>
 </div>

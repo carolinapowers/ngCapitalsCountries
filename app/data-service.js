@@ -24,8 +24,6 @@ function dataService($http, $q) {
                 }, function (error) {
                     return $q.reject(error);
                 });
-
-
         },
 
         getCountry: function (country) {
@@ -52,6 +50,20 @@ function dataService($http, $q) {
             var url = "http://api.geonames.org/neighboursJSON";
 
             return $http.get(url, config);
+        },
+
+        getOneCountry: function (country) {
+            var config = {
+                params: {
+                    username: 'carolinapowers',
+                    country: country
+                }
+            }
+
+            var url = 'http://api.geonames.org/countryInfoJSON';
+
+            return $http.get(url, config);
         }
+
     }
 }

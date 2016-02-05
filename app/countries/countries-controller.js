@@ -7,6 +7,8 @@ function CountriesCtrl(dataService, $scope, $http, $location, countries) {
 
     $scope.countries = countries;
 
+
+
     //    dataService.getCountries().then(function response(response) {
     //        return $scope.countries = response;
     //    });
