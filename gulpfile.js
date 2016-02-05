@@ -52,7 +52,7 @@ gulp.task('connect', function () {
 gulp.task('bs', function () {
     bs.init({
         server: {
-            baseDir: "./"
+            baseDir: "app/"
         }
     });
 });

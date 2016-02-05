@@ -21,10 +21,16 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
         controller: "CountryDetailsCtrl",
         resolve: {
             countryDetails: ['dataService', '$route', function (dataService, $route) {
+                console.log(dataService.getCountry($route.current.params.country));
                 return dataService.getCountry($route.current.params.country);
                 }],
             neighbors: ['dataService', '$route', function (dataService, $route) {
+                console.log(dataService.getNeighbors($route.current.params.country));
                 return dataService.getNeighbors($route.current.params.country);
+                }],
+            oneCountry: ['dataService', '$route', function (dataService, $route) {
+                console.log(dataService.getOneCountry($route.current.params.country));
+                return dataService.getOneCountry($route.current.params.country);
                 }]
         }
     })
