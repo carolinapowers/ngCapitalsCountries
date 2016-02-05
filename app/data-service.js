@@ -49,7 +49,7 @@ function dataService($http, $q) {
                 }
             }
 
-            var url = "http://api.geonames.org/neighboursJSON"
+            var url = "http://api.geonames.org/neighboursJSON";
 
             return $http.get(url, config);
         }

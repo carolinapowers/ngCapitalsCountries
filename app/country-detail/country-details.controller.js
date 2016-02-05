@@ -1,14 +1,25 @@
 angular.module('countryCapital')
-    .controller('CountryDetailsCtrl', CountriesCtrl);
+    .controller('CountryDetailsCtrl', CountryDetailsCtrl);
 
-CountriesCtrl.$inject = ['dataService', '$scope', '$http', '$location', 'countryDetails', 'neighbors'];
+CountryDetailsCtrl.$inject = ['dataService', '$scope', 'countryDetails', 'neighbors'];
 
-function CountriesCtrl(dataService, $scope, $http, $location, $routeParams, countryDetails, neighbors) {
+function CountryDetailsCtrl(dataService, $scope, countryDetails, neighbors) {
 
 
-    $scope.country = countryDetails;
+    //will help to find capital population
+    $scope.country = countryDetails.data.geonames;
+    console.log($scope.country);
 
-    $scope.neighbors = neighbors;
+    //neighbors
+    var vizinhos = neighbors.data.geonames;
+    console.log(vizinhos);
+    $scope.neighbors = [];
+    for (var i = 0; i < vizinhos.length; i++) {
+        $scope.neighbors.push(vizinhos[i].countryName);
+    }
+
+
+
 
 
 }
