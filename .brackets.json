@@ -10,6 +10,9 @@
         "/Users/cpowers/ngCapitalsCountries/gulpfile.js",
         "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.route.js",
         "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.controller.spec.js",
-        "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.controller.js"
+        "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.controller.js",
+        "/Users/cpowers/ngCapitalsCountries/app/home/home-controller.js",
+        "/Users/cpowers/ngCapitalsCountries/app/data-service.js",
+        "/Users/cpowers/ngCapitalsCountries/app/country-detail/country-details.controller.js"
     ]
 }

@@ -2,7 +2,7 @@
     <h1>{{countryDetail.countryName}}</h1>
     <p>Population of the Country: {{countryDetail.population}}</p>
     <p>Capital of the Country: {{countryDetail.capital}}</p>
-    <p>Area: {{oneCountry.areaInSqKm }}</p>
+    <p>Area: {{countryDetail.areaInSqKm }}</p>
 
     <span>{{neighbors.length}} Neighbors: </span>
     <span ng-repeat="neighbor in neighbors">
@@ -10,7 +10,7 @@
 </span>
 
     <div>
-        <img id='myImage' src="http://www.geonames.org/img/country/250/{{countryDetail.countryCode}}.png" />
-        <img src="http://www.geonames.org/flags/x/{{countryDetail.countryCode | lowercase}}.gif" />
+        <img id='myImage' ng-src="http://www.geonames.org/img/country/250/{{countryDetail.countryCode}}.png" />
+        <img ng-src="http://www.geonames.org/flags/x/{{countryDetail.countryCode | lowercase}}.gif" />
     </div>
 </div>

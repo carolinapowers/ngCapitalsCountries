@@ -29,9 +29,17 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
                 return dataService.getNeighbors($route.current.params.country);
                 }],
             oneCountry: ['dataService', '$route', function (dataService, $route) {
-                console.log(dataService.getOneCountry($route.current.params.country));
-                return dataService.getOneCountry($route.current.params.country);
-                }]
+                return dataService.getCountries($route.current.params.country).then(function (response) {
+                    var countryDetail;
+                    for (var i = 0; i < response.length; i++) {
+                        if (response[i].countryCode == $route.current.params.country) {
+                            countryDetail = response[i];
+                        }
+                    }
+                    return countryDetail;
+                })
+                            }]
+
         }
     })
 }])

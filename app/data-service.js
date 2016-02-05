@@ -52,18 +52,18 @@ function dataService($http, $q) {
             return $http.get(url, config);
         },
 
-        getOneCountry: function (country) {
-            var config = {
-                params: {
-                    username: 'carolinapowers',
-                    country: country
-                }
-            }
-
-            var url = 'http://api.geonames.org/countryInfoJSON';
-
-            return $http.get(url, config);
-        }
+//        getOneCountry: function (country) {
+           //            var config = {
+           //                params: {
+           //                    username: 'carolinapowers',
+           //                    country: country
+           //                }
+           //            }
+           //
+           //            var url = 'http://api.geonames.org/countryInfoJSON';
+           //
+           //            return $http.get(url, config);
+           //        }
 
     }
 }
