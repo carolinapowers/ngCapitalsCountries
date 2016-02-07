@@ -1,4 +1,12 @@
 angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
+.run(function ($rootScope, $location, $timeout) {
+        $rootScope.$on('$routeChangeStart', function () {
+            $rootScope.isLoading = true;
+        });
+        $rootScope.$on('$routeChangeSuccess', function () {
+                $rootScope.isLoading = false;   
+        });
+    })
 
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
