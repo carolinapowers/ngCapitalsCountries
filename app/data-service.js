@@ -25,12 +25,13 @@ function dataService($http, $q) {
                 });
         },
 
-        getCountry: function (country) {
+        getCountry: function (country, capital) {
             var url = 'http://api.geonames.org/searchJSON';
             var config = {
                 params: {
                     username: 'carolinapowers',
-                    country: country
+                    country: country,
+                      capital: capital  
                 }
             }
             return $http.get(url, config);
@@ -45,21 +46,7 @@ function dataService($http, $q) {
                 }
             }                      
             return $http.get(url, config);
-        },
-        
-         
-        getCapitalDetails: function(country, capital) {
-            var config = {
-                params: {
-                    username: "carolinapowers",
-                    country: country,
-                    capital: capital                   
-                }
-            }
-            var url = "http://api.geonames.org/searchJSON?"; 
-               
-            return $http.get(url, config);
-        }
+        }       
     }
       
 }
