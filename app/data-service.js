@@ -9,7 +9,6 @@ function dataService($http, $q) {
     return {
         getCountries: function () {
             var url = 'http://api.geonames.org/countryInfoJSON';
-
             var params = {
                 username: 'carolinapowers'
             }
