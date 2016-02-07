@@ -1,9 +1,9 @@
 <div class="container text-center">
     <h1>{{countryDetail.countryName}}</h1>
     <p>Population of the Country: {{countryDetail.population}}</p>
-    <p>Capital of the Country: {{countryDetail.capital}}</p>
     <p>Area: {{countryDetail.areaInSqKm }}</p>
-
+    <p>Capital of the Country: {{countryDetail.capital}}</p>
+    <p>Population of Capital: {{capitalPopulation}}</p>
     <span>{{neighbors.length}} Neighbors: </span>
     <span ng-repeat="neighbor in neighbors">
     <a ng-href="#/countries/{{neighbor.countryCode}}">{{neighbor.countryName}}</a>

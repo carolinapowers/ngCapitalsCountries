@@ -27,29 +27,40 @@ function dataService($http, $q) {
         },
 
         getCountry: function (country) {
+            var url = 'http://api.geonames.org/searchJSON';
             var config = {
                 params: {
                     username: 'carolinapowers',
                     country: country
                 }
             }
-
-            var url = 'http://api.geonames.org/searchJSON';
-
             return $http.get(url, config);
         },
 
         getNeighbors: function (country) {
+            var url = "http://api.geonames.org/neighboursJSON";
             var config = {
                 params: {
                     username: 'carolinapowers',
                     country: country
                 }
+            }                      
+            return $http.get(url, config);
+        },
+        
+         
+        getCapitalDetails: function(country, capital) {
+            var config = {
+                params: {
+                    username: "carolinapowers",
+                    country: country,
+                    capital: capital                   
+                }
             }
-
-            var url = "http://api.geonames.org/neighboursJSON";
-
+            var url = "http://api.geonames.org/searchJSON?"; 
+               
             return $http.get(url, config);
         }
     }
+      
 }
