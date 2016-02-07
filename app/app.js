@@ -47,4 +47,5 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
                 }]        
             }
         })
+        .otherwise('/');
 }])

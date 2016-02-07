@@ -6,6 +6,7 @@ CountryDetailsCtrl.$inject = ['dataService', '$scope', 'countryDetails', 'neighb
 function CountryDetailsCtrl(dataService, $scope, countryDetails, neighbors, oneCountry, $rootScope) {
 
     $scope.countryDetail = oneCountry;
+    console.log(oneCountry);
     $scope.neighbors = neighbors.data.geonames;
     
     /*will move this to a resolve function eventually*/
