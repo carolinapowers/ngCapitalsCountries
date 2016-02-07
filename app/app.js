@@ -40,4 +40,9 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
                 }]
         }
     })
+
+//    .when('/countries/:neighbors/:id', {
+             //        templateUrl: 'country-detail/country-detail.html',
+             //        controller: "CountryDetailsCtrl"
+             //    })
 }])

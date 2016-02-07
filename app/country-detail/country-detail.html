@@ -6,7 +6,7 @@
 
     <span>{{neighbors.length}} Neighbors: </span>
     <span ng-repeat="neighbor in neighbors">
-    <a href="">{{neighbor}}</a>
+    <a ng-href="#/countries/{{neighbor.countryCode}}">{{neighbor.countryName}}</a>
 </span>
 
     <div>
