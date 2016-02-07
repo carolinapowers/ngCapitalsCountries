@@ -5,6 +5,14 @@
         "/Users/carolinapowers/ngCapitalsCountries/app/country-detail/country-details.controller.js",
         "/Users/carolinapowers/ngCapitalsCountries/app/countries/countries-controller.js",
         "/Users/carolinapowers/ngCapitalsCountries/app/bower_components/lodash/vendor/underscore/underscore.js",
-        "jquery.js"
+        "jquery.js",
+        "/Users/cpowers/ngCapitalsCountries/app/bower_components/lodash/vendor/backbone/test/setup/environment.js",
+        "/Users/cpowers/ngCapitalsCountries/gulpfile.js",
+        "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.route.js",
+        "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.controller.spec.js",
+        "/Users/cpowers/ngCapitalsCountries/client/app/views/suggested-connections/suggested-connections.controller.js",
+        "/Users/cpowers/ngCapitalsCountries/app/home/home-controller.js",
+        "/Users/cpowers/ngCapitalsCountries/app/data-service.js",
+        "/Users/cpowers/ngCapitalsCountries/app/country-detail/country-details.controller.js"
     ]
 }

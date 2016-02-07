@@ -9,7 +9,6 @@ function dataService($http, $q) {
     return {
         getCountries: function () {
             var url = 'http://api.geonames.org/countryInfoJSON';
-
             var params = {
                 username: 'carolinapowers'
             }
@@ -24,34 +23,30 @@ function dataService($http, $q) {
                 }, function (error) {
                     return $q.reject(error);
                 });
-
-
         },
 
-        getCountry: function (country) {
+        getCountry: function (country, capital) {
+            var url = 'http://api.geonames.org/searchJSON';
             var config = {
                 params: {
                     username: 'carolinapowers',
-                    country: country
+                    country: country,
+                      capital: capital  
                 }
             }
-
-            var url = 'http://api.geonames.org/searchJSON';
-
             return $http.get(url, config);
         },
 
         getNeighbors: function (country) {
+            var url = "http://api.geonames.org/neighboursJSON";
             var config = {
                 params: {
                     username: 'carolinapowers',
                     country: country
                 }
-            }
-
-            var url = "http://api.geonames.org/neighboursJSON"
-
+            }                      
             return $http.get(url, config);
-        }
+        }       
     }
+      
 }

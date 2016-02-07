@@ -11,10 +11,12 @@
 
 </head>
 
-<body>
+<body ng-class="{loading: isLoading}">
     <h1 id="title">Countries & Capitals</h1>
     <hr>
-    <ng-view></ng-view>
+    <div class="animate-view-container">
+        <ng-view class="animate-view"></ng-view>
+    </div>
 
     <!--bower:js-->
     <script src="bower_components/lodash/lodash.js"></script>
