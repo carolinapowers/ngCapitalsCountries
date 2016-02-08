@@ -10,7 +10,7 @@ var rimraf = require('gulp-rimraf');
 var bs = require('browser-sync').create();
 
 var paths = {
-    scripts: ['app/**/*.js', '!app/bower_components/**/*.js'],
+    scripts: ['./app/**/*.js', '!./app/bower_components/**/*.js'],
     html: [
     './app/**/*.html',
     '!./app/index.html',
@@ -32,13 +32,13 @@ gulp.task('copy', ['rimraf'], function () {
         .pipe(gulp.dest('build/'));
 });
 
-gulp.task('usemin', ['copy'], function () {
-    gulp.src(paths.index)
-        .pipe(usemin({
-            css: [minifyCss(), 'concat'],
-            js: [ngmin(), uglify()]
-        }))
-        .pipe(gulp.dest(paths.build))
+gulp.task('usemin', [ 'copy' ], function(){
+  gulp.src( paths.index )
+    .pipe(usemin({
+      css: [ minifyCss(), 'concat' ],
+      js: [ ngmin(), uglify() ]
+    }))
+    .pipe(gulp.dest( paths.build ))
 });
 
 gulp.task('build', ['usemin']);
@@ -57,4 +57,4 @@ gulp.task('bs', function () {
     });
 });
 
-gulp.task('default', ['connect']);
+gulp.task('default',[]);
