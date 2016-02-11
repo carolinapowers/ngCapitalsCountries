@@ -18,7 +18,10 @@
     "gulp-rev": "^0.3.2",
     "gulp-rimraf": "^0.2.0",
     "gulp-uglify": "^0.3.0",
-    "gulp-usemin": "^0.3.3"
+    "gulp-usemin": "^0.3.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.7"
   },
   "dependencies": {
     "gulp-usemin": "^0.3.20"
