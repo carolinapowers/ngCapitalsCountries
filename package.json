@@ -21,6 +21,7 @@
     "gulp-usemin": "^0.3.3",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7"
   },
   "dependencies": {
