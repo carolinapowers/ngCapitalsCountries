@@ -10,14 +10,14 @@ var rimraf = require('gulp-rimraf');
 var bs = require('browser-sync').create();
 
 var paths = {
-    scripts: ['./app/**/*.js', '!./app/bower_components/**/*.js'],
+    scripts: ['./app/src/**/*.js', '!./app/bower_components/**/*.js'],
     html: [
-    './app/**/*.html',
+    './app/src/**/*.html',
     '!./app/index.html',
     '!./app/bower_components/**/*.html'
   ],
     index: './app/index.html',
-    build: '././build/'
+    build: './build/'
 }
 
 gulp.task('rimraf', function () {
