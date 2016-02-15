@@ -1,21 +1,21 @@
 angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
-.run(function ($rootScope, $location, $timeout) {
+    .run(function ($rootScope, $location, $timeout) {
         $rootScope.$on('$routeChangeStart', function () {
             $rootScope.isLoading = true;
         });
         $rootScope.$on('$routeChangeSuccess', function () {
-                $rootScope.isLoading = false;   
+            $rootScope.isLoading = false;
         });
     })
 
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: "home/home.html",
+            templateUrl: "src/home/home.html",
             controller: 'HomeCtrl'
         })
         .when('/countries', {
-            templateUrl: 'countries/countries.html',
+            templateUrl: 'src/countries/countries.html',
             controller: 'CountriesCtrl',
             resolve: {
                 countries: function (dataService) {
@@ -24,7 +24,7 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
             }
         })
         .when('/countries/:country', {
-            templateUrl: 'country-detail/country-detail.html',
+            templateUrl: 'src/country-detail/country-detail.html',
             controller: "CountryDetailsCtrl",
             resolve: {
                 countryDetails: ['dataService', '$route', function (dataService, $route) {
@@ -44,7 +44,7 @@ angular.module('countryCapital', ['ngRoute', 'ngAnimate'])
                             }
                             return countryDetail;
                         })
-                }]        
+                }]
             }
         })
 }])
