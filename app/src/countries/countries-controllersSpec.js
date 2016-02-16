@@ -12,8 +12,5 @@ describe('countryCapital', function () {
         it('should have countries', function () {
             expect(scope.countries).toBeDefined();           
         });
-        it('countries should have 100 countries', function() {
-           console.info(scope.countries);
-        })
     })
 })
