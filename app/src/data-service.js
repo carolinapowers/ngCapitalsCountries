@@ -5,19 +5,17 @@ dataService.$inject = ['$http', '$q'];
 
 function dataService($http, $q) {
 
-
-    return {
+    return {   
         getCountries: function () {
             var url = 'http://api.geonames.org/countryInfoJSON';
             var params = {
                 username: 'carolinapowers'
             }
+            var config = {
+                params: params
+            };
 
-            return $http({
-                    url: url,
-                    method: 'GET',
-                    params: params
-                })
+            return $http.get(url, config)
                 .then(function (response) {
                     return $q.when(response.data.geonames);
                 }, function (error) {
